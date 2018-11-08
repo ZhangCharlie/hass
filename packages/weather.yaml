@@ -1,0 +1,21 @@
+sensor:
+  - platform: template
+    sensors:
+      weather:
+        value_template: >-
+          {{states.zone.home.attributes.longitude}},{{states.zone.home.attributes.latitude}}
+      
+group:
+  cdweather:
+    name: 成都
+    view: no
+    entities:
+      - sensor.weather
+
+
+homeassistant:
+  customize:
+    sensor.weather:
+      custom_ui_state_card: state-card-weather
+      friendly_name: 彩云天气
+

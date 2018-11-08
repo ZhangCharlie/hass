@@ -1,0 +1,22 @@
+device_tracker:
+  - platform: lede
+    host: 192.168.100.1
+    username: root
+    password: xtjatypm
+    ssl: false
+    track_new_devices: yes
+    consider_home: 30
+
+
+sensor:
+  - platform: template
+    sensors:
+      zxl_phone:
+        friendly_name: 'zxl_phone'
+        value_template: "{{ '在线' if is_state('device_tracker.mi8xiaomi8', 'home') else '离线' }}"
+ 
+group:
+  devices:
+    name: 网络设备
+    entities:
+      - sensor.zxl_phone

@@ -1,0 +1,29 @@
+- alias: auto_phicomma1
+  initial_state: true
+  hide_entity: false
+  trigger: 
+    - platform: numeric_state
+      entity_id: sensor.m1
+#      value_template: '{{ states.sensor.m1.attributes.pm25 }}'
+      above: 35
+#    - platform: numeric_state
+#      entity_id: sensor.m1
+#      value_template: '{{ states.sensor.m1.hcho }}'
+#      above: 0.08
+#  condition:
+#  - condition: time
+#    after: '20:00:00'
+#    before: '23:59:00'
+  condition:
+    - condition: time
+      after: '20:00:00'
+      before: '23:59:59'
+
+  action:
+    - service: fan.turn_on
+      entity_id: fan.phicomma1
+    - delay:
+        minutes: 10
+    - service: fan.turn_off
+      entity_id: fan.phicomma1
+

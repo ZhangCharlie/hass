@@ -1,0 +1,40 @@
+
+phicommairdetector:
+  hide_if_away: false
+  icon:
+  mac: B0:F8:93:11:47:EF
+  name: Phicomm-AirDetector
+  picture:
+  track: false
+
+phicomm_tc1:
+  hide_if_away: false
+  icon:
+  mac: D0:BA:E4:63:61:76
+  name: PHICOMM TC1
+  picture:
+  track: false
+
+mico:
+  hide_if_away: false
+  icon:
+  mac: B0:F8:93:23:3B:03
+  name: MiCO
+  picture:
+  track: false
+
+phicomm_2d42e4:
+  hide_if_away: false
+  icon:
+  mac: B4:E6:2D:2D:42:E4
+  name: PHICOMM 2D42E4
+  picture:
+  track: false
+
+mi8xiaomi8:
+  hide_if_away: false
+  icon:
+  mac: 94:87:E0:1B:E1:E6
+  name: MI8-xiaomi8
+  picture:
+  track: true

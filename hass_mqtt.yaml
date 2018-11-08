@@ -1,0 +1,17 @@
+ihass_mqtt:
+  mqtt_host: "imbenb0.mqtt.iot.gz.baidubce.com"  
+  mqtt_port: 1883
+  mqtt_user: "zxl"
+  mqtt_pwd: "AakGT0W2VwwmAIvf"
+  topic_server: "/hass/server"
+  topic_event: "/hass/event"
+  event_interval: 60
+  api_token: "1fe49e3a9b8049f08d05b0d340eb55f0"
+  hide_qr: true
+  #aes_key: "..."
+  #aes_iv: "..."
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+

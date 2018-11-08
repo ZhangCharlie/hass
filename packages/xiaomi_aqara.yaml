@@ -1,0 +1,7 @@
+#小米设备接入
+#xiaomi_aqara:
+   #discovery_retry: 10
+   #gateways:
+     #- mac: 34ce008d46b3
+       #key: zslh8govlznj9vrx
+       #host: 10.1.78.213

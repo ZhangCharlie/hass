@@ -1,0 +1,22 @@
+﻿#sensor:
+#  - platform: aircat
+#    name: AirCat
+#    username: 18583269806
+#    password: 18583269806
+#    scan_interval: 60
+#    monitored_conditions: [pm25,hcho,temperature,humidity]
+
+fan:
+  - platform: phicomm
+    name: phicommA1
+    username: 18583269806
+    password: 18583269806
+    deviceid: 30-B0:F8:93:23:3B:03
+
+
+homeassistant:
+  customize:
+    fan.phicommA1:
+      friendly_name: 斐讯空气净化器
+
+

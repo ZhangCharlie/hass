@@ -1,0 +1,31 @@
+binary_sensor:
+  - platform: ping
+    name: work
+    host: 192.168.100.2
+    scan_interval: 30
+    count: 2
+    device_class: connectivity
+
+  - platform: ping
+    name: homenote
+    host: 192.168.1.164
+    scan_interval: 30
+    count: 2
+    device_class: presence
+
+sensor:
+  - platform: template
+    sensors:
+      work:
+        friendly_name: '办公电脑'
+        value_template: "{{ '连接' if is_state('binary_sensor.work', 'on') else '断开' }}"
+      homenote:
+        friendly_name: '家里笔记本'
+        value_template: "{{ '连接' if is_state('binary_sensor.homenote', 'on') else '断开' }}"
+        
+ 
+#group:
+#    devices:
+#        entities:
+#          - sensor.work
+ #         - sensor.homenote

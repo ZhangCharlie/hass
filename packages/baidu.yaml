@@ -1,0 +1,25 @@
+sensor:
+
+  - platform: baidu_travel_time_v3
+
+    name: traffic home to office
+
+    origin: zone.home
+
+    destination: zone.office
+
+    tactics: 5
+
+    api_key: rBjpGI1tzQ4grahoRcnTGa0VuKkWVeOx
+
+  - platform: baidu_travel_time_v3
+
+    name: traffic office to home
+
+    origin: zone.office
+
+    destination: zone.home
+
+    tactics: 5
+
+    api_key: rBjpGI1tzQ4grahoRcnTGa0VuKkWVeOx

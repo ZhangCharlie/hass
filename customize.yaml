@@ -1,0 +1,20 @@
+sensor.yr_symbol:
+  friendly_name: 天气
+sun.sun:
+  friendly_name: 日落
+sensor.m1:
+  friendly_name: 空气
+switch.dc1_s2:
+  friendly_name: 斐讯音箱
+media_player.dlnat1:
+  confirm_controls_show_lock: true
+  friendly_name: 客厅电视盒子
+media_player.phicomm_r1_bcc9:
+  friendly_name: Phicomm_R1
+switch.tc1_s1:
+  friendly_name: 开关1（驱蚊器）
+sensor.traffic_home_to_office:
+  friendly_name: 到公司
+sensor.traffic_office_to_home:
+  friendly_name: 到家
+

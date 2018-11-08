@@ -1,0 +1,37 @@
+sensor:
+  - platform: PhicommAirDetector
+    name: m1
+#phicommAccount : 18583269806
+#phicommPassowrd: 18583269806
+#airDetectorMac: "B0:F8:93:11:BE:23"
+    
+input_number:
+  phicomm_m1_led:
+    name: 屏幕亮度
+    icon: mdi:led-on
+    initial: 50
+    min: 0
+    max: 50
+    step: 25
+
+input_boolean:
+  phicomm_m1_reset:
+    name: Retry
+    icon: mdi:lock-reset
+    initial: False
+      
+group:
+  m1:
+    name: 空气检测仪M1
+    view: no
+    entities:
+      - sensor.m1
+      - input_number.phicomm_m1_led
+      - input_boolean.phicomm_m1_reset
+
+
+homeassistant:
+  customize:
+    sensor.m1:
+      custom_ui_state_card: state-card-custom-phicomm-aircat
+
