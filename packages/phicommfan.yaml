@@ -18,5 +18,7 @@ homeassistant:
   customize:
     fan.phicommA1:
       friendly_name: 斐讯空气净化器
+      hagenie_zone: 卧室
+      hagenie_deviceName: 空气净化器
 
 
