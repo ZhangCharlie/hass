@@ -1,0 +1,94 @@
+rest_command:
+  t1_up:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":19,"longclick":false}'
+
+  t1_down:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":20,"longclick":false}'
+
+  t1_left:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":21,"longclick":false}'
+
+  t1_right:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":22,"longclick":false}'
+
+  t1_ok:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":23,"longclick":false}'
+
+  t1_back:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":4,"longclick":false}'
+
+  t1_volup:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":24,"longclick":false}'
+
+  t1_voldown:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":25,"longclick":false}'
+
+  t1_home:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":3,"longclick":false}'
+
+  t1_menu:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":82,"longclick":false}'
+
+  t1_power:
+    method: POST
+    url: 'http://192.168.1.132:8080/v1/keyevent'
+    headers:
+      content-type: application/json
+    payload: '{"keycode":26,"longclick":false}'
+
+group:
+  m1:
+    name: T1盒子
+    view: no
+    entities:
+      - rest_command.t1_up
+      - rest_command.t1_down
+      - rest_command.t1_left
+      - rest_command.t1_right
+      - rest_command.t1_ok
+      - rest_command.t1_back
+      - rest_command.t1_volup
+      - rest_command.t1_voldown
+      - rest_command.t1_home
+      - rest_command.t1_menu
+      - rest_command.t1_power
